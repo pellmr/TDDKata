@@ -8,6 +8,8 @@ namespace BowlingGame
     {
         private readonly List<Frame> Frames = new();
 
+        private int TotalScore = 0;
+
         public Game()
         {
             Frames.Add(new Frame());
@@ -24,13 +26,14 @@ namespace BowlingGame
 
         public void Roll(int pinCount)
         {
+            TotalScore += pinCount;
             // var currentFrame = Frames.First(frame => frame.IsComplete());
             // currentFrame.Score(pinCount);
         }
 
         public int Score()
         {
-            return 0;
+            return TotalScore;
         }
     }
 }
