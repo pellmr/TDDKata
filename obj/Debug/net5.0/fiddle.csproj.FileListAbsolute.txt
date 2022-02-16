@@ -1,0 +1,15 @@
+/Users/pellmr/Projects/fiddle/bin/Debug/net5.0/fiddle.deps.json
+/Users/pellmr/Projects/fiddle/bin/Debug/net5.0/fiddle.runtimeconfig.json
+/Users/pellmr/Projects/fiddle/bin/Debug/net5.0/fiddle.runtimeconfig.dev.json
+/Users/pellmr/Projects/fiddle/bin/Debug/net5.0/fiddle.dll
+/Users/pellmr/Projects/fiddle/bin/Debug/net5.0/ref/fiddle.dll
+/Users/pellmr/Projects/fiddle/bin/Debug/net5.0/fiddle.pdb
+/Users/pellmr/Projects/fiddle/obj/Debug/net5.0/fiddle.csproj.AssemblyReference.cache
+/Users/pellmr/Projects/fiddle/obj/Debug/net5.0/fiddle.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pellmr/Projects/fiddle/obj/Debug/net5.0/fiddle.AssemblyInfoInputs.cache
+/Users/pellmr/Projects/fiddle/obj/Debug/net5.0/fiddle.AssemblyInfo.cs
+/Users/pellmr/Projects/fiddle/obj/Debug/net5.0/fiddle.csproj.CoreCompileInputs.cache
+/Users/pellmr/Projects/fiddle/obj/Debug/net5.0/fiddle.dll
+/Users/pellmr/Projects/fiddle/obj/Debug/net5.0/ref/fiddle.dll
+/Users/pellmr/Projects/fiddle/obj/Debug/net5.0/fiddle.pdb
+/Users/pellmr/Projects/fiddle/obj/Debug/net5.0/fiddle.genruntimeconfig.cache

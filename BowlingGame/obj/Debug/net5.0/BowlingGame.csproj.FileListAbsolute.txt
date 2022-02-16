@@ -1,0 +1,15 @@
+/Users/pellmr/Projects/fiddle/BowlingGame/bin/Debug/net5.0/BowlingGame.deps.json
+/Users/pellmr/Projects/fiddle/BowlingGame/bin/Debug/net5.0/BowlingGame.runtimeconfig.json
+/Users/pellmr/Projects/fiddle/BowlingGame/bin/Debug/net5.0/BowlingGame.runtimeconfig.dev.json
+/Users/pellmr/Projects/fiddle/BowlingGame/bin/Debug/net5.0/BowlingGame.dll
+/Users/pellmr/Projects/fiddle/BowlingGame/bin/Debug/net5.0/ref/BowlingGame.dll
+/Users/pellmr/Projects/fiddle/BowlingGame/bin/Debug/net5.0/BowlingGame.pdb
+/Users/pellmr/Projects/fiddle/BowlingGame/obj/Debug/net5.0/BowlingGame.csproj.AssemblyReference.cache
+/Users/pellmr/Projects/fiddle/BowlingGame/obj/Debug/net5.0/BowlingGame.GeneratedMSBuildEditorConfig.editorconfig
+/Users/pellmr/Projects/fiddle/BowlingGame/obj/Debug/net5.0/BowlingGame.AssemblyInfoInputs.cache
+/Users/pellmr/Projects/fiddle/BowlingGame/obj/Debug/net5.0/BowlingGame.AssemblyInfo.cs
+/Users/pellmr/Projects/fiddle/BowlingGame/obj/Debug/net5.0/BowlingGame.csproj.CoreCompileInputs.cache
+/Users/pellmr/Projects/fiddle/BowlingGame/obj/Debug/net5.0/BowlingGame.dll
+/Users/pellmr/Projects/fiddle/BowlingGame/obj/Debug/net5.0/ref/BowlingGame.dll
+/Users/pellmr/Projects/fiddle/BowlingGame/obj/Debug/net5.0/BowlingGame.pdb
+/Users/pellmr/Projects/fiddle/BowlingGame/obj/Debug/net5.0/BowlingGame.genruntimeconfig.cache
