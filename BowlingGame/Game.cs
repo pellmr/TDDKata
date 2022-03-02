@@ -8,32 +8,39 @@ namespace BowlingGame
     {
         private readonly List<Frame> Frames = new();
 
-        private int TotalScore = 0;
-
         public Game()
         {
-            Frames.Add(new Frame());
-            Frames.Add(new Frame());
-            Frames.Add(new Frame());
-            Frames.Add(new Frame());
-            Frames.Add(new Frame());
-            Frames.Add(new Frame());
-            Frames.Add(new Frame());
-            Frames.Add(new Frame());
-            Frames.Add(new Frame());
-            Frames.Add(new Frame());
+            for (int i = 0; i < 10; i++)
+            {
+                Frames.Add(new Frame(id: i + 1));
+            }
         }
 
         public void Roll(int pinCount)
         {
-            TotalScore += pinCount;
-            // var currentFrame = Frames.First(frame => frame.IsComplete());
-            // currentFrame.Score(pinCount);
+            var currentFrame = RecordRoll(pinCount);
+            RecoredBonus(pinCount, currentFrame);
+        }
+
+        private void RecoredBonus(int pinCount, Frame currentFrame)
+        {
+            var bonusFrames = Frames.FindAll(frame => frame.Id != currentFrame?.Id && frame.BonusAvailable());
+            foreach (var frame in bonusFrames)
+            {
+                frame.Roll(pinCount);
+            }
+        }
+
+        private Frame RecordRoll(int pinCount)
+        {
+            var currentFrame = Frames.Find(frame => !frame.RollsComplete());
+            currentFrame?.Roll(pinCount);
+            return currentFrame;
         }
 
         public int Score()
         {
-            return TotalScore;
+            return Frames.Sum(f => f.Score());
         }
     }
 }
