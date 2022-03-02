@@ -6,19 +6,20 @@ namespace BowlingGame
 {
     public class Frame
     {
-        public int Id { get; }
-        int? Roll1;
-        int? Roll2;
-        int? Bonus1;
-        int? Bonus2;
-        public Frame(int id)
-        {
-            Id = id;
-        }
+        private int? Roll1;
+        private int? Roll2;
+        private int? Bonus1;
+        private int? Bonus2;
+        internal int Score { get => (Roll1 ?? 0) + (Roll2 ?? 0) + (Bonus1 ?? 0) + (Bonus2 ?? 0); }
 
         internal bool RollsComplete()
         {
             return Roll2 != null;
+        }
+
+        internal bool BonusAvailable()
+        {
+            return RollsComplete() && !FrameComplete();
         }
 
         internal void Roll(int pinCount)
@@ -62,27 +63,17 @@ namespace BowlingGame
                 Roll2 = 0;
         }
 
-        internal bool IsStrike()
+        private bool IsStrike()
         {
             return Roll1 == 10;
         }
 
-        internal bool IsSpare()
+        private bool IsSpare()
         {
-            return Roll1 != 10 && Roll1 + Roll2 == 10;
+            return Roll1 + Roll2 == 10 && !IsStrike();
         }
 
-        internal bool BonusAvailable()
-        {
-            return RollsComplete() && !FrameComplete();
-        }
-
-        internal int Score()
-        {
-            return (Roll1 ?? 0) + (Roll2 ?? 0) + (Bonus1 ?? 0) + (Bonus2 ?? 0);
-        }
-
-        internal bool FrameComplete()
+        private bool FrameComplete()
         {
             return RollsComplete() && Bonus1 != null && Bonus2 != null;
         }

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,8 +11,13 @@ namespace BowlingGame
         {
             for (int i = 0; i < 10; i++)
             {
-                Frames.Add(new Frame(id: i + 1));
+                Frames.Add(new Frame());
             }
+        }
+
+        public int Score()
+        {
+            return Frames.Sum(f => f.Score);
         }
 
         public void Roll(int pinCount)
@@ -24,8 +28,7 @@ namespace BowlingGame
 
         private void RecoredBonus(int pinCount, Frame currentFrame)
         {
-            var bonusFrames = Frames.FindAll(frame => frame.Id != currentFrame?.Id && frame.BonusAvailable());
-            foreach (var frame in bonusFrames)
+            foreach (var frame in Frames.FindAll(frame => frame != currentFrame && frame.BonusAvailable()))
             {
                 frame.Roll(pinCount);
             }
@@ -36,11 +39,6 @@ namespace BowlingGame
             var currentFrame = Frames.Find(frame => !frame.RollsComplete());
             currentFrame?.Roll(pinCount);
             return currentFrame;
-        }
-
-        public int Score()
-        {
-            return Frames.Sum(f => f.Score());
         }
     }
 }
