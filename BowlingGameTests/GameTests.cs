@@ -76,7 +76,20 @@ namespace BowlingGameTests
 
             //assert
             Assert.Equal(300, game.Score());
+
         }
+        [Fact]
+        public void WhenExcessRollsAreThrown_GameScoreShouldNotIncludeThem()
+        {
+            //arrange
+
+            //act
+            RollMany(numberOfRolls: 30, scorePerRoll: 10);
+
+            //assert
+            Assert.Equal(300, game.Score());
+        }
+
         [Fact]
         public void WhenAllStrikesAreThrownExeptTheLastRollIsA9_GameScoreShouldBe299()
         {

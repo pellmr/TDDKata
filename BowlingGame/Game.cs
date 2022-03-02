@@ -22,8 +22,14 @@ namespace BowlingGame
 
         public void Roll(int pinCount)
         {
+            if (IsGameComplete()) return;
             var currentFrame = RecordRoll(pinCount);
             RecoredBonus(pinCount, currentFrame);
+        }
+
+        private bool IsGameComplete()
+        {
+            return Frames.All(f => f.FrameComplete());
         }
 
         private void RecoredBonus(int pinCount, Frame currentFrame)

@@ -22,6 +22,11 @@ namespace BowlingGame
             return RollsComplete() && !FrameComplete();
         }
 
+        internal bool FrameComplete()
+        {
+            return RollsComplete() && Bonus1 != null && Bonus2 != null;
+        }
+
         internal void Roll(int pinCount)
         {
             if (Roll1 == null)
@@ -71,11 +76,6 @@ namespace BowlingGame
         private bool IsSpare()
         {
             return Roll1 + Roll2 == 10 && !IsStrike();
-        }
-
-        private bool FrameComplete()
-        {
-            return RollsComplete() && Bonus1 != null && Bonus2 != null;
         }
     }
 }
